@@ -18,5 +18,5 @@ class StringCalculator:
     def __extract_delimiters(self, values):
         if values.startswith('//'):
             delimiters, values = values.split('\n', 1)
-            return (delimiters[2:].replace('][', ']|[') + '|,|\n', values)
-        return (',|\n', values)
+            return delimiters[2:].replace('][', ']|[') + '|,|\n', values
+        return ',|\n', values
